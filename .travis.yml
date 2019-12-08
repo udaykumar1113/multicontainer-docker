@@ -15,10 +15,10 @@ after_success:
   - docker build -t udaygandagari/multicontainer-worker ./worker
 
 #Login to docker CLI with credentials
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
 #Take the images and push to dockerhub
-- docker push udaygandagari/multicontainer-client
-- docker push udaygandagari/multicontainer-nginx
-- docker push udaygandagari/multicontainer-server
-- docker push udaygandagari/multicontainer-worker
+  - docker push udaygandagari/multicontainer-client
+  - docker push udaygandagari/multicontainer-nginx
+  - docker push udaygandagari/multicontainer-server
+  - docker push udaygandagari/multicontainer-worker
