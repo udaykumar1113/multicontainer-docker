@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion" : 2,
-    "containerDefinations" : [
+    "containerDefinitions" : [
         {
             "name" : "client",
             "image" : "udaygandagari/multicontainer-client",
@@ -13,7 +13,7 @@
             "name" : "server",
             "image" : "udaygandagari/multicontainer-server",
             "hostname" : "api",
-            "esssential" : "false",
+            "essential" : "false",
             "memory": 128
         },
         {
@@ -28,10 +28,10 @@
             "image" : "udaygandagari/multicontainer-nginx",
             "hostname" : "nginx",
             "essential" : "true",
-            "portmappings" : [
+            "portMappings" : [
                 {
                     "hostport" : 80,
-                    "containerport" : 80
+                    "containerPort" : 80
                 }
             ],
             "links" : ["client", "server"],
